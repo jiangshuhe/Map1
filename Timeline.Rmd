@@ -1,6 +1,6 @@
 ---
 title: "Timeline"
-author: " "
+author: "Natural Disaster"
 output: 
     html_document:
         toc: TRUE
