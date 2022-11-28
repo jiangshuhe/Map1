@@ -1,6 +1,6 @@
 ---
-title: "TImeline"
-author: "Shuhe Jiang"
+title: "Timeline"
+author: " "
 output: 
     html_document:
         toc: TRUE
