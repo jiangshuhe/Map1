@@ -58,7 +58,7 @@ filtered_disaster$Date<-as.Date(filtered_disaster$Date)
 filtered_disaster$constant<-0.1
 ```
 
-```{r, echo=FALSE}
+```{r, warning=FALSE, echo=FALSE}
 colors <- c('#4AC6B7', '#1972A4', '#965F8A')
 
 fig <- plot_ly(filtered_disaster, x = ~Date, y = ~constant, color = ~Disaster.Type, size = ~Total.Deaths, colors = colors,
@@ -70,7 +70,8 @@ fig <- plot_ly(filtered_disaster, x = ~Date, y = ~constant, color = ~Disaster.Ty
                       '<br>Economic Losses(USD):', Total.Damages...000.US..),
         hoverinfo = 'text')
         
-fig <- fig %>% layout(title = 'Timeline of Disasters', height = 400,
+fig <- fig %>% layout(legend=list(title=list(text=' Single click to filter out <br> Double click to select')),
+  title = list(text = paste0('Timeline')), height = 400,
          xaxis = list(title = 'Date',
                       gridcolor = 'rgb(255, 255, 255)'),
          yaxis = list(range=c(-0.2,0.4),showgrid = FALSE,showlegend=FALSE,showticklabels = FALSE),
